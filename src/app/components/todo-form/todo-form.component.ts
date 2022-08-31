@@ -22,5 +22,6 @@ export class TodoFormComponent implements OnInit {
 
   OnSubmit() { 
     this.onAddTask.emit(this.newTask);
+    this.newTask = {taskId: 0, completed : false, task : "" };
   }
 }

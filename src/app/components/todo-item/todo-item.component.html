@@ -1,13 +1,13 @@
-<div>
-    <tr>
-        <td *ngIf="Item.completed" class="strikethrough">
-            {{Item.task}}
-        </td>
-        <td *ngIf="!Item.completed">
-            <button (click)="onComplete()">Complete</button> {{Item.task}}
-        </td>
-        <td>
-            <button (click)="onRemove()">X</button>
-        </td>
-    </tr>
+<div class="row">
+    <div class="col-md-1">
+        <div  *ngIf="!Item.completed">
+            <button (click)="onComplete()">Complete</button>
+        </div>
+    </div>
+    <div float-left class="col-md-4" [ngClass]= "{'strikethrough' : Item.completed }">
+        {{Item.task}}
+    </div>
+    <div  float-left class="col-md-4">
+        <button (click)="onRemove()">X</button>
+    </div>
 </div>

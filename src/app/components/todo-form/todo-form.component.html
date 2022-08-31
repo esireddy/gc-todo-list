@@ -1,18 +1,18 @@
 
 <form #todo="ngForm" (ngSubmit)="OnSubmit()">
-    <div>
-        <tr>
-            <td>
+    <div class="container-fluid">
+        <tr class="row">
+            <td  class="col-md-8">
                 <label>Enter a new task:</label>
             </td>
         </tr>
-        <tr>
-            <td>
+        <tr class="row">
+            <td class="col-md-8">
                 <input type="text" class="form-control" name="taskCtrl" id="taskCtrl" placeholder="Add your to-do" required [(ngModel)]="newTask.task"/>
             </td>
         </tr>
-        <tr>
-            <td>
+        <tr class="row">
+            <td  class="col-md-8">
                 <button type="submit" [disabled]="!todo.valid" class="customButton">Add</button>
             </td>
         </tr>
