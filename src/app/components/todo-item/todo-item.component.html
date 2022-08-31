@@ -1,0 +1,13 @@
+<div>
+    <tr>
+        <td *ngIf="Item.completed" class="strikethrough">
+            {{Item.task}}
+        </td>
+        <td *ngIf="!Item.completed">
+            <button (click)="onComplete()">Complete</button> {{Item.task}}
+        </td>
+        <td>
+            <button (click)="onRemove()">X</button>
+        </td>
+    </tr>
+</div>
